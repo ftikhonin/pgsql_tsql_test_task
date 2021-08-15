@@ -3,7 +3,7 @@
  * @param columnName - имя столбца
  * @param tableName - имя таблицы
  * @param operationType - тип операции (0 - к нижнему регистру, 1 - к верхнему регистру)
- * @author Тихонин Ф.И. <fredr7@yandex.ru>
+ * @author Тихонин Ф.И.
  */
 CREATE OR REPLACE FUNCTION dbo.UpperOrLowerText (columnName TEXT, tableName TEXT, operationType INT) RETURNS VOID
 AS $$
