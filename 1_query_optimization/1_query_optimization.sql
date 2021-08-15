@@ -1,6 +1,6 @@
-﻿DECLARE @p1 NVARCHAR(4000) = N'ф%'
-       ,@p2 NVARCHAR(4000) = N'к%'
-       ,@p3 NVARCHAR(4000) = N'423'; --А зачем тут 4000 символов? :)
+﻿DECLARE @p1 NVARCHAR(2) = N'ф%'
+       ,@p2 NVARCHAR(2) = N'к%'
+       ,@p3 NVARCHAR(3) = N'423'; --А зачем нам тут 4000 символов? :)
 
 --Скалярные функции вынести в отдельную переменную
 DECLARE @region INT = dbo.GetRegion();
