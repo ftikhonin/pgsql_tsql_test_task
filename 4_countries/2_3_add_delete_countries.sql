@@ -10,7 +10,7 @@ CREATE OR REPLACE FUNCTION DeleteCountry(countryId OID) RETURNS VOID AS $$
         BEGIN
                 DELETE FROM dbo.countries WHERE id = countryId;
         END;
-$$ LANGUAGE plpgsql;
+$$ LANGUAGE PLPGSQL;
 
 
 --4.3) Написать скрипт по добавлению/удалению данных в созданную таблицу.
