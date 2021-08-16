@@ -1,4 +1,4 @@
-﻿SELECT * 
+SELECT * 
 FROM dbo.Employee e
 
 --все дочерние элементы определенного узла
