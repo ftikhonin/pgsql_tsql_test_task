@@ -1,9 +1,9 @@
-﻿/**
+/**
  * Функция возвращает все дочерние элементы определенного узла
  * 
  * @author Тихонин Ф.И. <fredr7@yandex.ru>
  */
-ALTER FUNCTION dbo.GetAllChildByParent(
+CREATE FUNCTION dbo.GetAllChildByParent(
 @managerId INT
 )
 RETURNS @result TABLE 
