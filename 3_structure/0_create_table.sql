@@ -1,4 +1,4 @@
-﻿--DROP TABLE Employee;
+--DROP TABLE Employee;
 
 CREATE TABLE Employee(id INT NOT NULL IDENTITY PRIMARY KEY, first_name NVARCHAR(100), manager_id INT);
 
