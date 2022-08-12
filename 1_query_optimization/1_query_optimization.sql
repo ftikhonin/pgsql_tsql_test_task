@@ -14,7 +14,7 @@ CREATE TABLE #persons(person_id INT NOT NULL PRIMARY KEY);
 INSERT INTO #persons
 SELECT p.person_id
 FROM tmp.person(NOLOCK) p
-WHERE ISNULL(p.person_deleted, 1) = 1
+WHERE p.person_deleted IS NULL OR p.person_deleted = 1
   AND p.Person_updDT <= @tzGetDate;
 
 
@@ -34,7 +34,7 @@ OUTER APPLY (
       FROM dbo.org(NOLOCK) o --в зависимости от объема данных можно попробовать поменять порядок таблиц в запросе(начать запрос с dbo.job)
       INNER JOIN dbo.job(nolock) j ON j.org_id = o.org_id
                                   AND j.job_id = ps.job_id
-      WHERE ISNULL(o.Region_id, @region) = @region      
+      WHERE o.Region_id IS NULL OR o.Region_id = @region      
       ORDER BY o.Org_endDate DESC
 ) work
 OUTER APPLY (
